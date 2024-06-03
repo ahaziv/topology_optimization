@@ -141,10 +141,6 @@ class TopologyOptimizer:
             if i == int(len(self.ext_force_indices) / 2):
                 mid_force_index = (x, y)
 
-        # TODO - remove after testing
-        # for x in range(50):
-        #     rgb_dist[0, x] = [0, 1, 0]
-
         # Plot the array
         plt.imshow(rgb_dist, aspect='auto', origin='lower')
         plt.axis('equal')
@@ -260,6 +256,3 @@ class TopologyOptimizer:
             phin = np.reshape(self.phi, (self.nel_y + 1, self.nel_x + 1), order='F')
             phie = 0.25 * (phin[0:-1, 0:-1] + phin[1:, 0:-1] + phin[0:-1, 1:] + phin[1:, 1:])
             material_dist[:, :] = (phie[:, :] > 0)
-
-
-# -------------------------------------------- main ------------------------------------------------------------------ #

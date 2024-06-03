@@ -2,6 +2,7 @@ from typing import Tuple, List, Dict, Optional
 import numpy as np
 import copy
 
+
 def get_random_board(total_voxels: int) -> Tuple[int, int]:
     divisor_dict = {27720: [(105, 264), (110, 252), (120, 231), (126, 220), (132, 210), (140, 198), (154, 180), (165, 168)],
                     20160: [(90, 240), (90, 224), (96, 210), (105, 192), (112, 180), (120, 168), (126, 160), (140, 144)],
